@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Aplic Web II</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <a href=""><li>Sobre nós</li></a>
+            <a href=""><li>Cardápio</li></a>
+            <a href=""><li>Filiais</li></a>
+            <a href=""><li>Contato</li></a>
+        </ul>
+    </header>
+
+    <main>
+        <img src="IMG/BANNER.png" alt="">
+        <section>
+
+            <h1>Faça seu pedido</h1>
+
+            <form action="" method="get" onsubmit="event.preventDefault(); envio()">
+
+                <label for="nome">Digite seu nome:</label>
+                <input type="text" name="nome" id="nome">
+
+                <label for="endereco">Digite seu Endereço:</label>
+                <input type="text" name="endereco" id="endereco">
+
+                <label for="numero">Diga o número de sua moradia:</label>
+                <input type="number" name="numero" id="numero">
+
+
+
+                <h2>Escolha aqui</h2>
+                    
+                        <article>
+                            <img src="IMG/moda da casa.jpg" alt="" class="imagem">
+                            <div><input type="checkbox" name="p1" id="p1" onchange="pedido(100,this.checked)"> <strong>Moda da Casa</strong></div>
+                        </article>
+                    
+        
+                    
+                        <article>
+                            <img src="IMG/abrasileiradinho.jpg" alt="" class="imagem">
+                            <div><input type="checkbox" name="p2" id="p2" onchange="pedido(95,this.checked)"> <strong>Abrasileiradinho</strong></div>
+                        </article>
+                    
+        
+                    
+                        <article>
+                            <img src="IMG/cremosinho.jpg" alt="" class="imagem">
+                            <div>
+                                <input type="checkbox" name="p3" id="p3" onchange="pedido(25,this.checked)"> <strong>Cremosinho</strong>
+                            </div>
+                        </article>
+                    
+                        
+                        <h2>Conferir Pré valor da compra</h2>
+                        <p id="saida">
+                            R$ <output id="total"> 0 </output>
+                        </p>
+                        
+            <div>
+
+                <h2>Finalizar compra</h2>
+                
+                    <button type="submit" value = "Comprar" onclick="resultado()"> Comprar </button>
+                    <button type="reset" value="Cancelar"> Cancelar </button onclick="limpa()">
+                </div>
+            </form>
+
+        </section>
+        
+        <section id="esconde">
+            <h1 id="pronto">As informações estarão aqui!</h1>
+            <p id="resp"></p>
+            <p id="resp1"></p>
+            <p id="resp2"></p>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <a href=""><li>Trabalhe conosco</li></a>
+            <a href=""><li>Seja um franqueado</li></a>
+            <a href=""><li>Veja nossos investidores</li></a>
+        </ul>
+    </footer>
+
+    <script src="JS/node.JS"></script>
+</body>
+</html>
